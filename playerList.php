@@ -9,6 +9,8 @@
                 require("dbconnect.php");
 
                 show_player($conn);
+
+                mysqli_close($conn);
             ?>
         </div>
     </body>
