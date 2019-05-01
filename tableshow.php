@@ -132,4 +132,47 @@ function show_team_stat_type($conn) {
 	echo '</tbody>';
 	echo '</table>';
 }
+
+function show_player_stats($conn) {
+	$sql = "SELECT ". 
+			"value, time_stamp, playerStat_Name, ".
+			"player.player_ID, player.name, ".
+			"game.game_ID, game.game_name ".
+		"FROM playerstats ".
+			"join player on player.player_ID = playerstats.player_ID ".
+			"join game on game.game_ID = playerstats.game_ID; ";
+	$result = $conn->query($sql);
+
+	if ($result->num_rows == 0) {
+		echo "0 results";
+		return;
+	}
+	
+	echo '<table border>';
+	echo '<thead><tr>';
+	echo '<th>'."Player ID".'</th>'.
+		'<th>'."Player Name".'</th>'.
+		'<th>'."Game ID".'</th>'.
+		'<th>'."Game Name".'</th>'.
+		'<th>'."Player Stat Type".'</th>'.
+		'<th>'."Time Stamp".'</th>'.
+		'<th>'."Stat Value".'</th>';
+	echo '</tr></thead>';
+	echo '<tbody>';
+
+	while($row = $result->fetch_assoc()) {
+		echo '<tr>';
+		echo "<td>" . $row["player_ID"]. "</td>";
+		echo "<td>" . $row["name"]. "</td>";
+		echo "<td>" . $row["game_ID"]. "</td>";
+		echo "<td>" . $row["game_name"]. "</td>";
+		echo "<td>" . $row["playerStat_Name"]. "</td>";
+		echo "<td>" . $row["time_stamp"]. "</td>";
+		echo "<td>" . $row["value"]. "</td>";
+		echo '</tr>';
+	}
+	
+	echo '</tbody>';
+	echo '</table>';
+}
 ?>
