@@ -80,4 +80,56 @@ function show_game($conn) {
 	echo '</tbody>';
 	echo '</table>';
 }
+
+function show_player_stat_type($conn) {
+	$sql = "SELECT playerStat_Name, value_type FROM playerstattype";
+	$result = $conn->query($sql);
+
+	if ($result->num_rows == 0) {
+		echo "0 results";
+		return;
+	}
+	
+	echo '<table border>';
+	echo '<thead><tr>';
+	echo '<th>'."Stat Name".'</th>'.'<th>'."Value Type".'</th>';
+	echo '</tr></thead>';
+	echo '<tbody>';
+
+	while($row = $result->fetch_assoc()) {
+		echo '<tr>';
+		echo "<td>" . $row["playerStat_Name"]. "</td>";
+		echo "<td>" . $row["value_type"]. "</td>";
+		echo '</tr>';
+	}
+	
+	echo '</tbody>';
+	echo '</table>';
+}
+
+function show_team_stat_type($conn) {
+	$sql = "SELECT teamStat_Name, value_type FROM teamstattype";
+	$result = $conn->query($sql);
+
+	if ($result->num_rows == 0) {
+		echo "0 results";
+		return;
+	}
+	
+	echo '<table border>';
+	echo '<thead><tr>';
+	echo '<th>'."Stat Name".'</th>'.'<th>'."Value Type".'</th>';
+	echo '</tr></thead>';
+	echo '<tbody>';
+
+	while($row = $result->fetch_assoc()) {
+		echo '<tr>';
+		echo "<td>" . $row["teamStat_Name"]. "</td>";
+		echo "<td>" . $row["value_type"]. "</td>";
+		echo '</tr>';
+	}
+	
+	echo '</tbody>';
+	echo '</table>';
+}
 ?>
