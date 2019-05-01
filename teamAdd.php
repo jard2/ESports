@@ -7,6 +7,7 @@
             <?php
                 require("dbconnect.php");
                 require("tableshow.php");
+                require("beforeAfter.php");
 
                 if(isset($_POST['team_add'])) {
                     if (!get_magic_quotes_gpc()) {
@@ -15,23 +16,11 @@
                         $team_name = $_POST['team_name'];
                     }
 
-                    echo "<table><tr><th>Before</th><th>After</th></tr>";
-                    echo "<tr><td style=\"vertical-align:top\">";
-                    show_team($conn);
-
                     $sql = "INSERT INTO team ".
                         "(`team_ID`, `name`) VALUES ".
                         "(NULL, '$team_name')";
 
-                    $return = mysqli_query($conn, $sql);
-
-                    if (!$return) {
-                        die('Could not add team: '. mysqli_error($conn));
-                    }
-
-                    echo "</td><td style=\"vertical-align:top\">";
-                    show_team($conn);
-                    echo "</td></tr></table>";
+                    display_before_after($sql, 'show_team', $conn);
 
                     echo '<a href="teamAdd.php"><button>'.
                         "Add Another Team".

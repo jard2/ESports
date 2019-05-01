@@ -7,6 +7,7 @@
             <?php
                 require("dbconnect.php");
                 require("tableshow.php");
+                require("beforeAfter.php");
 
                 if(isset($_POST['player_add'])) {
                     if (!get_magic_quotes_gpc()) {
@@ -18,23 +19,12 @@
                         $player_birthdate = $_POST['player_birthdate'];
                         $player_bio = $_POST['player_bio'];
                     }
-                    echo "<table><tr><th>Before</th><th>After</th></tr>";
-                    echo "<tr><td style=\"vertical-align:top\">";
-                    show_player($conn);
 
                     $sql = "INSERT INTO player ".
                         "(`player_ID`, `name`, `bio`, `birth_date`) VALUES ".
                         "(NULL, '$player_name', '$player_bio', '$player_birthdate')";
 
-                    $return = mysqli_query($conn, $sql);
-
-                    if (!$return) {
-                        die('Could not add player: '. mysqli_error($conn));
-                    }
-
-                    echo "</td><td style=\"vertical-align:top\">";
-                    show_player($conn);
-                    echo "</td></tr></table>";
+                    display_before_after($sql, 'show_player', $conn);
 
                     echo '<a href="playerAdd.php"><button>'.
                         "Add Another Player".

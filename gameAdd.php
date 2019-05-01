@@ -7,6 +7,7 @@
             <?php
                 require("dbconnect.php");
                 require("tableshow.php");
+                require("beforeAfter.php");
 
                 if(isset($_POST['game_add'])) {
                     if (!get_magic_quotes_gpc()) {
@@ -19,23 +20,11 @@
                         $game_release_date = $_POST['game_release_date'];
                     }
 
-                    echo "<table><tr><th>Before</th><th>After</th></tr>";
-                    echo "<tr><td style=\"vertical-align:top\">";
-                    show_game($conn);
-
                     $sql = "INSERT INTO game ".
                         "(`game_ID`, `game_name`, `publisher`, `release_date`) VALUES ".
                         "(NULL, '$game_name', '$game_publisher', '$game_release_date')";
 
-                    $return = mysqli_query($conn, $sql);
-
-                    if (!$return) {
-                        die('Could not add game: '. mysqli_error($conn));
-                    }
-
-                    echo "</td><td style=\"vertical-align:top\">";
-                    show_game($conn);
-                    echo "</td></tr></table>";
+                    display_before_after($sql, 'show_game', $conn);
 
                     echo '<a href="gameAdd.php"><button>'.
                         "Add Another Game".
