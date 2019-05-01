@@ -1,40 +1,29 @@
 <?php
+function show_player($conn) {
+	$sql = "SELECT player_ID, name, birth_date, bio FROM player";
+	$result = $conn->query($sql);
 
-function show_instructor($conn){
-
-//include "dbconnect.php";
-
-$sql = "SELECT id, name, dept_name, salary FROM instructor";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-	
-	echo "<br><h3> Instructor Table<h3> <br>";
+	if ($result->num_rows == 0) {
+		echo "0 results";
+		return;
+	}
 	
 	echo '<table border>';
 	echo '<thead><tr>';
-	echo '<th>'."ID".'</th>'.'<th>'."Name".'</th>'.'<th>'."Department".'</th>'.'<th>'."Salary".'</th>';
+	echo '<th>'."Player ID".'</th>'.'<th>'."Name".'</th>'.'<th>'."Birth Date".'</th>'.'<th>'."Bio".'</th>';
 	echo '</tr></thead>';
 	echo '<tbody>';
 
 	while($row = $result->fetch_assoc()) {
 		echo '<tr>';
-        echo "<td>" . $row["id"]. "</td>";
+		echo "<td>" . $row["player_ID"]. "</td>";
 		echo "<td>" . $row["name"]. "</td>";
-		echo "<td>" . $row["dept_name"]. "</td>";
-		echo "<td>" . $row["salary"]. "</td>";
+		echo "<td>" . $row["birth_date"]. "</td>";
+		echo "<td>" . $row["bio"]. "</td>";
 		echo '</tr>';
-    }
+	}
 	
 	echo '</tbody>';
 	echo '</table>';
-	
-    // output data of each row
-    
-	
-} else {
-    echo "0 results";
-}
-//$conn->close();
 }
 ?>
