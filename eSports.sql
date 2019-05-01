@@ -43,6 +43,8 @@ create table TeamStats
 	foreign key (game_ID) references Game(game_ID)
 );
 
+ALTER TABLE TeamStats ADD UNIQUE(time_stamp, teamStat_Name, team_ID, game_ID);
+
 create table PlayerStats
 	(value varchar(30),
 	time_stamp timestamp,
@@ -53,6 +55,8 @@ create table PlayerStats
 	foreign key (player_ID) references Player(player_ID),
 	foreign key (game_ID) references Game(game_ID)
 	);
+
+ALTER TABLE PlayerStats ADD UNIQUE(time_stamp, playerStat_Name, player_ID, game_ID);
 
 Create table Members
 	(player_ID int,
