@@ -13,7 +13,7 @@
                 mysqli_close($conn);
             ?>
 
-            <a href="teamStatTypeAdd.php"><h3>Add a New Team Stat Type</h3></a>
+            <a href="teamStatAdd.php"><h3>Add a New Team Statistic</h3></a>
         </div>
     </body>
 </html>

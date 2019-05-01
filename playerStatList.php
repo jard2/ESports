@@ -13,7 +13,7 @@
                 mysqli_close($conn);
             ?>
 
-            <a href="playerStatAdd.php"><h3>Add a New Player Stat</h3></a>
+            <a href="playerStatAdd.php"><h3>Add a New Player Statistic</h3></a>
         </div>
     </body>
 </html>
