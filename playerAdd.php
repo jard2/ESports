@@ -29,7 +29,7 @@
                     $return = mysqli_query($conn, $sql);
 
                     if (!$return) {
-                        die('Could not add user: '. mysqli_error($conn));
+                        die('Could not add player: '. mysqli_error($conn));
                     }
 
                     echo "</td><td style=\"vertical-align:top\">";
