@@ -12,6 +12,8 @@
 
                 mysqli_close($conn);
             ?>
+
+            <a href="playerAdd.php"><h3>Add a New Player</h3></a>
         </div>
     </body>
 </html>
