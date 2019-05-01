@@ -26,4 +26,30 @@ function show_player($conn) {
 	echo '</tbody>';
 	echo '</table>';
 }
+
+function show_team($conn) {
+	$sql = "SELECT team_ID, name FROM team";
+	$result = $conn->query($sql);
+
+	if ($result->num_rows == 0) {
+		echo "0 results";
+		return;
+	}
+	
+	echo '<table border>';
+	echo '<thead><tr>';
+	echo '<th>'."Team ID".'</th>'.'<th>'."Name".'</th>';
+	echo '</tr></thead>';
+	echo '<tbody>';
+
+	while($row = $result->fetch_assoc()) {
+		echo '<tr>';
+		echo "<td>" . $row["team_ID"]. "</td>";
+		echo "<td>" . $row["name"]. "</td>";
+		echo '</tr>';
+	}
+	
+	echo '</tbody>';
+	echo '</table>';
+}
 ?>
