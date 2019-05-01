@@ -52,4 +52,32 @@ function show_team($conn) {
 	echo '</tbody>';
 	echo '</table>';
 }
+
+function show_game($conn) {
+	$sql = "SELECT game_ID, game_name, publisher, release_date FROM game";
+	$result = $conn->query($sql);
+
+	if ($result->num_rows == 0) {
+		echo "0 results";
+		return;
+	}
+	
+	echo '<table border>';
+	echo '<thead><tr>';
+	echo '<th>'."Game ID".'</th>'.'<th>'."Name".'</th>'.'<th>'."Publisher".'</th>'.'<th>'."Release Date".'</th>';
+	echo '</tr></thead>';
+	echo '<tbody>';
+
+	while($row = $result->fetch_assoc()) {
+		echo '<tr>';
+		echo "<td>" . $row["game_ID"]. "</td>";
+		echo "<td>" . $row["game_name"]. "</td>";
+		echo "<td>" . $row["publisher"]. "</td>";
+		echo "<td>" . $row["release_date"]. "</td>";
+		echo '</tr>';
+	}
+	
+	echo '</tbody>';
+	echo '</table>';
+}
 ?>
