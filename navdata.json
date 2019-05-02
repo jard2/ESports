@@ -54,7 +54,7 @@
 		},
 		
 		{
-			"name"		: "Stats",
+			"name"		: "Player Stats",
 			"location"	: "#",
 			"dropdown" 	: "true",
 			
@@ -106,6 +106,90 @@
 				{
 					"name"		: "Update Stat Type",
 					"location"	: "playerStatTypeUpdate.php",
+					"dropdown"	: "false"
+				}
+			]
+		},
+		
+		{
+			"name"		: "Teams",
+			"location"	: "#",
+			"dropdown" 	: "true",
+			
+			"dropdown-data": [
+				{
+					"name"		: "Add Team",
+					"location"	: "teamAdd.php",
+					"dropdown"	: "false"
+				},
+			
+				{
+					"name"		: "List Teams",
+					"location"	: "teamList.php",
+					"dropdown"	: "false"
+				},
+				
+				{
+					"name"		: "Update Teams",
+					"location"	: "teamUpdate.php",
+					"dropdown"	: "false"
+				}
+			]
+		},
+		
+		{
+			"name"		: "Team Stats",
+			"location"	: "#",
+			"dropdown" 	: "true",
+			
+			"dropdown-data": [
+				{
+					"name"		: "Add Team Stat",
+					"location"	: "teamStatAdd.php",
+					"dropdown"	: "false"
+				},
+			
+				{
+					"name"		: "List Team Stats",
+					"location"	: "teamStatList.php",
+					"dropdown"	: "false"
+				},
+				
+				{
+					"name"		: "Update Team Stat",
+					"location"	: "teamStatUpdate.php",
+					"dropdown"	: "false"
+				},
+				
+				{
+					"name"		: "Delete Team Stat",
+					"location"	: "teamStatDelete.php",
+					"dropdown"	: "false"
+				}
+			]
+		},
+		
+		{
+			"name"		: "Team Stat Types",
+			"location"	: "#",
+			"dropdown" 	: "true",
+			
+			"dropdown-data": [
+				{
+					"name"		: "Add Stat Type",
+					"location"	: "teamStatTypeAdd.php",
+					"dropdown"	: "false"
+				},
+			
+				{
+					"name"		: "List Stat Types",
+					"location"	: "teamStatTypeList.php",
+					"dropdown"	: "false"
+				},
+				
+				{
+					"name"		: "Update Stat Type",
+					"location"	: "teamStatTypeUpdate.php",
 					"dropdown"	: "false"
 				}
 			]
