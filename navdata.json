@@ -1,0 +1,60 @@
+{
+	"nav" : [
+		{
+			"name"		: "Insert",
+			"location"	: "insert.php",
+			"dropdown"	: "false"
+		},
+		
+		{
+			"name"		: "Display",
+			"location"	: "display.php",
+			"dropdown"	: "false"
+		},
+		
+		{
+			"name"		: "Delete",
+			"location"	: "delete.php",
+			"dropdown"	: "false"
+		},
+		
+		{
+			"name"		: "Update",
+			"location"	: "update.php",
+			"dropdown"	: "false"
+		},
+		
+		{
+			"name"		: "Add Team Member",
+			"location"	: "insert_team_member.php",
+			"dropdown"	: "false"
+		},
+		
+				{
+			"name"		: "Remove Team Member",
+			"location"	: "remove_team_member.php",
+			"dropdown"	: "false"
+		},
+		
+		
+		{
+			"name"		: "Dropdown Demo",
+			"location"	: "#",
+			"dropdown"	: "true",
+			
+			"dropdown-data" : [
+				{
+					"name"		: "Baz",
+					"location"	: "baz.php",
+					"dropdown"	: "false"
+				},
+				
+				{
+					"name"		: "Box",
+					"location"	: "box.php",
+					"dropdown"	: "false"
+				}
+			]
+		}
+	]
+}
