@@ -25,33 +25,20 @@
 		},
 		
 		{
-			"name"		: "Add Team Member",
-			"location"	: "insert_team_member.php",
-			"dropdown"	: "false"
-		},
-		
-				{
-			"name"		: "Remove Team Member",
-			"location"	: "remove_team_member.php",
-			"dropdown"	: "false"
-		},
-		
-		
-		{
-			"name"		: "Dropdown Demo",
+			"name"		: "Manipulate Team Members",
 			"location"	: "#",
-			"dropdown"	: "true",
+			"dropdown" 	: "true",
 			
-			"dropdown-data" : [
+			"dropdown-data": [
 				{
-					"name"		: "Baz",
-					"location"	: "baz.php",
+					"name"		: "Add Team Member",
+					"location"	: "insert_team_member.php",
 					"dropdown"	: "false"
 				},
-				
+			
 				{
-					"name"		: "Box",
-					"location"	: "box.php",
+					"name"		: "Remove Team Member",
+					"location"	: "remove_team_member.php",
 					"dropdown"	: "false"
 				}
 			]

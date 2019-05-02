@@ -3,10 +3,11 @@
 
    <head>
       <title>Add New Record in MySQL Database</title>
-   </head>
-
-   <body>
-   <div style="height:900px; background-color: lightblue;" align="center">
+	<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+	<?php include 'heading.php';?>
+   <div align="center">
       <?php
 
 		require("tableshow.php");
@@ -88,7 +89,7 @@
       }
    ?>
    <hr width="50">
-<a href="Frontpage.html" style="color:red;font-weight:bold;">Home</a>
+<a href="index.php" style="color:red;font-weight:bold;">Home</a>
 <hr width="50">
    </div>
 
