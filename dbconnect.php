@@ -1,8 +1,8 @@
 <?php
 //Step1
  $servername = "localhost";  // if you run on local server the name is "localhost:3306". If you run on cs server, use only "localhost"
-$username = "jard2";
-$password = "G78mvShv";
+$username = "auramgold";
+$password = "testingpasstime";
 $dbname = "jard2";
 
 // Create connection
