@@ -48,7 +48,7 @@
      <?php
          show_team_stats($conn);
      ?>
-     <p>Enter Game ID, Team ID, Stat Name, and Value for deletion <br> </p>
+     <p>Enter Game ID, Team ID, Stat Type Name, and Value for deletion <br> </p>
       <form method = "post" action = "<?php $_PHP_SELF ?>">
          <table width = "600" border = "0" cellspacing = "1" cellpadding = "2">
             <tr>
@@ -64,7 +64,7 @@
                </td>
             </tr>
             <tr>
-               <td width = "250">Stat Name</td>
+               <td width = "250">Stat Type Name</td>
                <td>
                   <input name = "team_stat_name" type = "text" id = "team_stat_name">
                </td>

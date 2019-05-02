@@ -48,7 +48,7 @@
      <?php
          show_player_stats($conn);
      ?>
-     <p>Enter Game ID, Player ID, Stat Name, and Value fordeletion <br> </p>
+     <p>Enter Game ID, Player ID, Stat Type Name, and Value fordeletion <br> </p>
       <form method = "post" action = "<?php $_PHP_SELF ?>">
          <table width = "600" border = "0" cellspacing = "1" cellpadding = "2">
             <tr>
@@ -64,7 +64,7 @@
                </td>
             </tr>
             <tr>
-               <td width = "250">Stat Name</td>
+               <td width = "250">Stat Type Name</td>
                <td>
                   <input name = "player_stat_name" type = "text" id = "player_stat_name">
                </td>

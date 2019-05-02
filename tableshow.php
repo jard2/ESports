@@ -92,7 +92,7 @@ function show_player_stat_type($conn) {
 	
 	echo '<table border>';
 	echo '<thead><tr>';
-	echo '<th>'."Stat Name".'</th>'.'<th>'."Value Type".'</th>';
+	echo '<th>'."Stat Type Name".'</th>'.'<th>'."Value Type".'</th>';
 	echo '</tr></thead>';
 	echo '<tbody>';
 
@@ -118,7 +118,7 @@ function show_team_stat_type($conn) {
 	
 	echo '<table border>';
 	echo '<thead><tr>';
-	echo '<th>'."Stat Name".'</th>'.'<th>'."Value Type".'</th>';
+	echo '<th>'."Stat Type Name".'</th>'.'<th>'."Value Type".'</th>';
 	echo '</tr></thead>';
 	echo '<tbody>';
 

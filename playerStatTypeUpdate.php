@@ -61,7 +61,7 @@
       <form method = "post" action = "<?php $_PHP_SELF ?>">
          <table width = "600" border = "0" cellspacing = "1" cellpadding = "2">
 	    <tr>
-               <td width = "250">Stat Name</td>
+               <td width = "250">Stat Type Name</td>
                <td>
                   <input name = "playerStat_Name" type = "text" id = "playerStat_Name">
                </td>

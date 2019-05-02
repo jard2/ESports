@@ -78,7 +78,7 @@
                </td>
             </tr>
 	    <tr>
-               <td width = "250">Stat Name</td>
+               <td width = "250">Stat Type Name</td>
                <td>
                   <input name = "teamStat_Name" type = "text" id = "teamStat_Name">
                </td>
