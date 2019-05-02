@@ -20,10 +20,8 @@
             $game_ID = $_POST['game_ID'];
             $player_stat_name = $_POST['player_stat_name'];
             $player_ID = $_POST['player_ID'];
-            $value = $_POST['value'];
-
    
-            $sql = "DELETE FROM PlayerStats WHERE game_ID=$game_id and playerStat_name=$player_stat_name and player_ID=$player_ID and value=$value";
+            $sql = "DELETE FROM PlayerStats WHERE game_ID='$game_ID' and playerStat_name='$player_stat_name' and player_ID='$player_ID' ";
               
             
             $retval = mysqli_query($conn, $sql);
@@ -35,7 +33,7 @@
             echo "Data deleted successfully\n";
 			
 			echo " <br> Player Stats after deletion <br>";
-			show_player_stat($conn);
+			show_player_stats($conn);
 			
             mysqli_close($conn);
          } 
@@ -69,12 +67,6 @@
                <td width = "250">Stat Name</td>
                <td>
                   <input name = "player_stat_name" type = "text" id = "player_stat_name">
-               </td>
-            </tr>
-            <tr>
-               <td width = "250">Value</td>
-               <td>
-                  <input name = "value" type = "text" id = "value">
                </td>
             </tr>
 
