@@ -4,7 +4,7 @@
 <div style="height:900px; background-color: lightblue;" align="center">
 <br><br><br><br>
 
-<p>Player Stat Deletion <br> </p>
+<p>Team Stat Deletion <br> </p>
 
 <?php
 	  
@@ -14,12 +14,12 @@
 	  
          if(isset($_POST['delete'])) {
             $game_ID = $_POST['game_ID'];
-            $player_stat_name = $_POST['player_stat_name'];
-            $player_ID = $_POST['player_ID'];
+            $team_stat_name = $_POST['team_stat_name'];
+            $team_ID = $_POST['team_ID'];
             $value = $_POST['value'];
 
    
-            $sql = "DELETE FROM PlayerStats WHERE game_ID=$game_id and playerStat_name=$player_stat_name and player_ID=$player_ID and value=$value";
+            $sql = "DELETE FROM TeamStats WHERE game_ID=$game_id and teamStat_name=$team_stat_name and team_ID=$team_ID and value=$value";
               
             
             $retval = mysqli_query($conn, $sql);
@@ -30,20 +30,20 @@
          
             echo "Data deleted successfully\n";
 			
-			echo " <br> Player Stats after deletion <br>";
-			show_player_stat($conn);
+			echo " <br> Team Stats after deletion <br>";
+			show_team_stat($conn);
 			
             mysqli_close($conn);
          } 
 		 else if(isset($_POST['show'])){
 			 
-            show_player_stat($conn);
+            show_team_stat($conn);
 		 }	 
 		 
 		 else {
       ?>
 	  <br><br><br><br>
-     <p>Enter Game ID, Player ID, and the stat name ofr deletion <br> </p>
+     <p>Enter Game ID, Team ID, Stat Name, and Value for deletion <br> </p>
       <form method = "post" action = "<?php $_PHP_SELF ?>">
          <table width = "600" border = "0" cellspacing = "1" cellpadding = "2">
             <tr>
@@ -53,15 +53,15 @@
                </td>
             </tr>
             <tr>
-               <td width = "250">Player ID</td>
+               <td width = "250">Team ID</td>
                <td>
-                  <input name = "player_ID" type = "text" id = "player_ID">
+                  <input name = "team_ID" type = "text" id = "team_ID">
                </td>
             </tr>
             <tr>
                <td width = "250">Stat Name</td>
                <td>
-                  <input name = "player_stat_name" type = "text" id = "player_stat_name">
+                  <input name = "team_stat_name" type = "text" id = "team_stat_name">
                </td>
             </tr>
             <tr>
