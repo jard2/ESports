@@ -8,7 +8,10 @@
 <?php
 require("dbconnect.php");
 require("tableshow.php");
-show_instructor($conn);
+
+show_members($conn);
+show_player($conn);
+show_team($conn);
 ?>
 
 

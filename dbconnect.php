@@ -1,9 +1,9 @@
 <?php
 //Step1
- $servername = "localhost";  // if you run on local server the name is "localhost:3306". If you run on cs server, use only "localhost"
-$username = "auramgold";
-$password = "testingpasstime";
-$dbname = "jard2";
+$servername = "localhost:3306";  // if you run on local server the name is "localhost:3306". If you run on cs server, use only "localhost"
+$username = "root";
+$password = "";
+$dbname = "esports";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -14,3 +14,4 @@ $conn = new mysqli($servername, $username, $password, $dbname);
   //else
 	  //echo "Database Connection was successful";
 ?>
+
