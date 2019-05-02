@@ -213,26 +213,6 @@
 					"dropdown"	: "false"
 				}
 			]
-		},
-		
-		{
-			"name"		: "Manipulate Team Players",
-			"location"	: "#",
-			"dropdown" 	: "true",
-			
-			"dropdown-data": [
-				{
-					"name"		: "Add Team Player",
-					"location"	: "addteamplayer.php",
-					"dropdown"	: "false"
-				},
-			
-				{
-					"name"		: "Remove Team player",
-					"location"	: "removeteamplayer.php",
-					"dropdown"	: "false"
-				}
-			]
 		}
 	]
 }
