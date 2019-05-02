@@ -8,13 +8,12 @@
 
       <title>Add Team Player</title>
 
-   </head>
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+<?php include 'heading.php';?>
 
-
-
-   <body>
-
-   <div style="height:900px; background-color: lightblue;" align="center">
+   <div align="center">
 
       <?php
 
@@ -154,7 +153,7 @@
 
    <hr width="50">
 
-<a href="addteamplayer.php"><h3>Back to Members list</h3></a>
+<a href="index.php" style="color:red;font-weight:bold;">Home</a>
 
 
 
