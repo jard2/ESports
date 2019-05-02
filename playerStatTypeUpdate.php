@@ -54,6 +54,9 @@
 		 else {
       ?>
 	  <br><br><br><br>
+     <?php
+         show_player_stat_type($conn);
+     ?>
      <p>Enter player stat type information to update <br> </p>
       <form method = "post" action = "<?php $_PHP_SELF ?>">
          <table width = "600" border = "0" cellspacing = "1" cellpadding = "2">

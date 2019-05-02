@@ -58,6 +58,9 @@
 		 else {
       ?>
 	  <br><br><br><br>
+     <?php
+         show_player($conn);
+     ?>
      <p>Enter Player information for update <br> </p>
       <form method = "post" action = "<?php $_PHP_SELF ?>">
          <table width = "600" border = "0" cellspacing = "1" cellpadding = "2">

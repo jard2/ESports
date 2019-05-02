@@ -60,6 +60,9 @@
 		 else {
       ?>
 	  <br><br><br><br>
+     <?php
+         show_game($conn);
+     ?>
      <p>Enter game information to date <br> </p>
       <form method = "post" action = "<?php $_PHP_SELF ?>">
          <table width = "600" border = "0" cellspacing = "1" cellpadding = "2">

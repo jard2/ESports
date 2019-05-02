@@ -47,6 +47,9 @@
 		 else {
       ?>
 	  <br><br><br><br>
+     <?php
+         show_team_stats($conn);
+     ?>
      <p>Enter Game ID, Team ID, Stat Name, and Value for deletion <br> </p>
       <form method = "post" action = "<?php $_PHP_SELF ?>">
          <table width = "600" border = "0" cellspacing = "1" cellpadding = "2">
