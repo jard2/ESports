@@ -58,16 +58,41 @@
       <form method = "post" action = "<?php $_PHP_SELF ?>">
          <table width = "600" border = "0" cellspacing = "1" cellpadding = "2">
             <tr>
-               <td width = "250">Player ID</td>
+               <td>Player</td>
                <td>
-                  <input name = "i_ID" type = "text" id = "i_ID">
+                     <select id="i_ID" name="i_ID">
+                        <?php
+                           $sql = "SELECT player_ID, name FROM player";
+                           $result = $conn->query($sql);
+
+                           while($row = $result->fetch_assoc()) {
+                                 echo '<option ';
+                                 echo 'value="'.$row['player_ID'].'">';
+                                 echo $row['player_ID'].' '.$row['name'];
+                                 echo '</option>';
+                           }
+                        ?>
+                     </select>
                </td>
             </tr>
 
-
             <tr>
-              <td width = "250"> Team ID</td>
-              <td> <input name="i_teamID" type= "text" id = "i_teamID"> </td>
+               <td>Team</td>
+               <td>
+                     <select id="i_teamID" name="i_teamID">
+                        <?php
+                           $sql = "SELECT team_ID, name FROM team";
+                           $result = $conn->query($sql);
+
+                           while($row = $result->fetch_assoc()) {
+                                 echo '<option ';
+                                 echo 'value="'.$row['team_ID'].'">';
+                                 echo $row['team_ID'].' '.$row['name'];
+                                 echo '</option>';
+                           }
+                        ?>
+                     </select>
+               </td>
             </tr>
 
             <tr>
