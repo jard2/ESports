@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html> 
-    <body style="height:900px; background-color: lightblue;" align="center">
+<head>
+
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+<?php include 'heading.php';?>
         <div align="center">
             <h1>Add a New Team Stat Type</h1>
 

@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html> 
-    <body style="height:900px; background-color: lightblue;" align="center">
+<head>
+
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+<?php include 'heading.php';?>
+        <div align="center">
         <div align="center">
             <h1>All Team Stats</h1>
 

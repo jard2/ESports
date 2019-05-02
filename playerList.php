@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html> 
-    <body style="height:900px; background-color: lightblue;" align="center">
+<head>
+
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+<?php include 'heading.php';?>
         <div align="center">
-            <h1>All Players</h1>
+            <h2>All Players</h2>
 
             <?php
                 require("tableshow.php");
