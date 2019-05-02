@@ -32,7 +32,7 @@
 
             			
 			echo " <br> Teams table before update <br>";
-			show_team($conn);
+			show_player_stats($conn);
    
 	    //$sql = "UPDATE team SET name = '$name' WHERE team_ID = '$team_ID'";
 	    $sql = "UPDATE playerstats SET value = '$value' WHERE game_ID = '$game_ID' 
@@ -82,6 +82,12 @@
                <td width = "250">Stat Name</td>
                <td>
                   <input name = "playerStat_Name" type = "text" id = "playerStat_Name">
+               </td>
+            </tr>
+            <tr>
+               <td width = "250">Value</td>
+               <td>
+                  <input name = "value" type = "text" id = "value">
                </td>
             </tr>
 
