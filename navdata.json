@@ -25,6 +25,19 @@
 		},
 		
 		{
+			"name"		: "Add Team Member",
+			"location"	: "insert_team_member.php",
+			"dropdown"	: "false"
+		},
+		
+				{
+			"name"		: "Remove Team Member",
+			"location"	: "remove_team_member.php",
+			"dropdown"	: "false"
+		},
+		
+		
+		{
 			"name"		: "Dropdown Demo",
 			"location"	: "#",
 			"dropdown"	: "true",
