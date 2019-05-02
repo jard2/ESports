@@ -3,10 +3,12 @@
 
    <head>
       <title>Update Player Stat Type</title>
-   </head>
 
-   <body>
-   <div style="height:900px; background-color: lightblue;" align="center">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+<?php include 'heading.php';?>
+        <div align="center">
       <?php
 	  
 		require("tableshow.php");

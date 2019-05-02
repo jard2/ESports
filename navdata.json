@@ -1,27 +1,114 @@
 {
 	"nav" : [
+	
 		{
-			"name"		: "Insert",
-			"location"	: "insert.php",
-			"dropdown"	: "false"
+			"name"		: "Games",
+			"location"	: "#",
+			"dropdown" 	: "true",
+			
+			"dropdown-data": [
+				{
+					"name"		: "Add Game",
+					"location"	: "gameAdd.php",
+					"dropdown"	: "false"
+				},
+			
+				{
+					"name"		: "List Games",
+					"location"	: "gameList.php",
+					"dropdown"	: "false"
+				},
+				
+				{
+					"name"		: "Update Games",
+					"location"	: "gameUpdate.php",
+					"dropdown"	: "false"
+				}
+			]
 		},
 		
 		{
-			"name"		: "Display",
-			"location"	: "display.php",
-			"dropdown"	: "false"
+			"name"		: "Players",
+			"location"	: "#",
+			"dropdown" 	: "true",
+			
+			"dropdown-data": [
+				{
+					"name"		: "Add Player",
+					"location"	: "playerAdd.php",
+					"dropdown"	: "false"
+				},
+			
+				{
+					"name"		: "List Players",
+					"location"	: "playerList.php",
+					"dropdown"	: "false"
+				},
+				
+				{
+					"name"		: "Update Players",
+					"location"	: "playerUpdate.php",
+					"dropdown"	: "false"
+				}
+			]
 		},
 		
 		{
-			"name"		: "Delete",
-			"location"	: "delete.php",
-			"dropdown"	: "false"
+			"name"		: "Stats",
+			"location"	: "#",
+			"dropdown" 	: "true",
+			
+			"dropdown-data": [
+				{
+					"name"		: "Add Player Stat",
+					"location"	: "playerStatAdd.php",
+					"dropdown"	: "false"
+				},
+			
+				{
+					"name"		: "List Player Stats",
+					"location"	: "playerStatList.php",
+					"dropdown"	: "false"
+				},
+				
+				{
+					"name"		: "Update Player Stat",
+					"location"	: "playerStatUpdate.php",
+					"dropdown"	: "false"
+				},
+				
+				{
+					"name"		: "Delete Player Stat",
+					"location"	: "playerStatDelete.php",
+					"dropdown"	: "false"
+				}
+			]
 		},
 		
 		{
-			"name"		: "Update",
-			"location"	: "update.php",
-			"dropdown"	: "false"
+			"name"		: "Player Stat Types",
+			"location"	: "#",
+			"dropdown" 	: "true",
+			
+			"dropdown-data": [
+				{
+					"name"		: "Add Stat Type",
+					"location"	: "playerStatTypeAdd.php",
+					"dropdown"	: "false"
+				},
+			
+				{
+					"name"		: "List Stat Types",
+					"location"	: "playerStatTypeList.php",
+					"dropdown"	: "false"
+				},
+				
+				{
+					"name"		: "Update Stat Type",
+					"location"	: "playerStatTypeUpdate.php",
+					"dropdown"	: "false"
+				}
+			]
 		},
 		
 		{
